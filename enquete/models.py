@@ -17,7 +17,7 @@ class Enquete(models.Model):
     
 
 class Opcao(models.Model):
-    enquete = models.ForeignKey(Enquete)
+    enquete = models.ForeignKey(Enquete, related_name='opcoes')
     conteudo = models.CharField(max_length=200)
     votos = models.IntegerField()
     
